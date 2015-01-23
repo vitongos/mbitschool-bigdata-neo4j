@@ -1,4 +1,4 @@
-package neo4j.sample02;
+package neo4j.rest;
 
 public class Relation {
     public static final String OUT = "out";

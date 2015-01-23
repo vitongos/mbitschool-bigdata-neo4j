@@ -1,4 +1,4 @@
-package neo4j.sample02;
+package neo4j.rest;
 
 import java.util.ArrayList;
 import java.util.Arrays;

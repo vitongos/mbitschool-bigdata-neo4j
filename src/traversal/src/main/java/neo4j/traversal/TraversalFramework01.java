@@ -1,4 +1,4 @@
-package neo4j.sample01;
+package neo4j.traversal;
 
 import java.io.File;
 

@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>neo4j</groupId>
-  <artifactId>sample03</artifactId>
+  <artifactId>traversal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>sample03</name>
+  <name>traversal</name>
   <url>http://maven.apache.org</url>
 
   <properties>

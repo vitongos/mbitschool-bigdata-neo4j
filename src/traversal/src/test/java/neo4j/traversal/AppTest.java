@@ -1,4 +1,4 @@
-package neo4j.sample03;
+package neo4j.traversal;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
