@@ -8,10 +8,10 @@ MATCH (n {name: 'Anthony Hopkins'})-[:ACTS_IN]->(d) RETURN n, COUNT(d)
 # ----------------------------------------------------------------------
 # ¿Cuántas películas en su título contienen la palabra 'kill'?
 
-MATCH (n:Film) WHERE n.title =~ '(?i).*kill.*' RETURN n.title
+MATCH (n) WHERE n.title =~ '(?i).*kill.*' RETURN n.title
 
 # Sample 3
 # ----------------------------------------------------------------------
 # ¿Cuáles películas ha dirigido Spielberg y de qué género es cada una, ordenadas por duración?
 
-MATCH (n)<-[:DIRECTED]-(d {name:'Steven Spielberg'}) RETURN n.name, n.genre ORDER BY n.runtime
+MATCH (n)<-[:DIRECTED]-(d {name:'Steven Spielberg'}) RETURN n.title, n.genre ORDER BY n.runtime
