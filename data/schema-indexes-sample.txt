@@ -1,0 +1,5 @@
+MATCH (a)-[:ACTS_IN]->() SET a:ACTOR
+
+CREATE INDEX ON :ACTOR(name)
+
+MATCH (a:ACTOR {name:'Henry Fonda'})-[:ACTS_IN]-(m) RETURN m.title
