@@ -7,12 +7,12 @@ rm -rf neo4j.tar.gz
 sudo mv neo4j-community-3.1.1/ /opt/neo4j/
 sudo ln -s /opt/neo4j/bin/neo4j /usr/bin/neo4j
 cd ~/neo4j-src/
-sudo sed -i -r 's/#dbms\.security\.auth_enabled=false/dbms\.security\.auth_enabled=false/' /opt/neo4j/conf/neo4j.conf
-mkdir /opt/neo4j/data/graph.db
-cp data/cineasts_12k_movies_50k_actors_2.1.6.zip /opt/neo4j/data/graph.db/
-cd /opt/neo4j/data/graph.db/
-unzip cineasts_12k_movies_50k_actors_2.1.6.zip
-mv cineasts_12k_movies_50k_actors.db/* ./
-rm -rf cineasts_12k_movies_50k_actors_2.1.6.zip cineasts_12k_movies_50k_actors.db
-sudo sed -i -r 's/#allow_store_upgrade=true/allow_store_upgrade=true/' /opt/neo4j/conf/neo4j.properties
+sed -i -r 's/#dbms\.security\.auth_enabled=false/dbms\.security\.auth_enabled=false/' /opt/neo4j/conf/neo4j.conf
+sed -i -r 's/#dbms\.allow_format_migration=true/dbms\.allow_format_migration=true/' /opt/neo4j/conf/neo4j.conf
+cd /tmp
+wget http://example-data.neo4j.org/3.0-datasets/cineasts.tgz
+tar xzf cineasts.tgz
+rm -rf /opt/neo4j/data/databases/graph.db/
+mv graph.db /opt/neo4j/data/databases/
+chown cloudera:cloudera /opt/neo4j/data -R
 neo4j start
