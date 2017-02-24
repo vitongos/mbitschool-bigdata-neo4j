@@ -1,3 +1,5 @@
+install.packages("igraph")
+install.packages("RNeo4j")
 library(igraph)
 library(RNeo4j)
 
