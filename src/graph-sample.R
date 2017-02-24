@@ -14,9 +14,9 @@ from <- getSingleNode(graph, query, name = 'Don Cheadle')
 
 to <- getSingleNode(graph, query, name = 'Anthony Hopkins')
 
-p <- shortestPath(from, "ACTS_IN", to, max_depth = 10)
+p <- shortestPath(from, "ACTS_IN", to, direction = "all", max_depth = 10)
 n <- nodes(p)
-sapply(n, function(x) x$name)
+sapply(n, function(x) ifelse(!is.null(x$title), x$title, x$name))
 
 #
 # 2. Create igraph
