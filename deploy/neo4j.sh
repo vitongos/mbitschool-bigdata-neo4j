@@ -7,7 +7,7 @@ rm -rf neo4j.tar.gz
 sudo mv neo4j-community-3.1.1/ /opt/neo4j/
 sudo ln -s /opt/neo4j/bin/neo4j /usr/bin/neo4j
 cd ~/neo4j-src/
-sudo sed -i -r 's/dbms\.security\.auth_enabled=true/dbms\.security\.auth_enabled=false/' /opt/neo4j/conf/neo4j-server.properties
+sudo sed -i -r 's/#dbms\.security\.auth_enabled=false/dbms\.security\.auth_enabled=false/' /opt/neo4j/conf/neo4j.conf
 mkdir /opt/neo4j/data/graph.db
 cp data/cineasts_12k_movies_50k_actors_2.1.6.zip /opt/neo4j/data/graph.db/
 cd /opt/neo4j/data/graph.db/
