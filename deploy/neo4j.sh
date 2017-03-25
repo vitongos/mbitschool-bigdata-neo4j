@@ -15,4 +15,4 @@ tar xzf cineasts.tgz
 rm -rf /opt/neo4j/data/databases/graph.db/
 mv graph.db /opt/neo4j/data/databases/
 chown cloudera:cloudera /opt/neo4j/data -R
-neo4j start
+/opt/neo4j/bin/neo4j start
