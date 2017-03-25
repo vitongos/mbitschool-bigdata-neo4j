@@ -15,6 +15,13 @@ git clone https://github.com/vitongos/mbitschool-bigdata-neo4j.git neo4j-src
 chmod +x neo4j-src/deploy/*.sh
 ```
 
+### Instalar Java 8
+Ejecutar el siguiente script:
+```bash
+cd ~/neo4j-src/
+deploy/java8.sh
+```
+
 ### Instalar Neo4j
 Ejecutar el siguiente script:
 ```bash
@@ -35,12 +42,3 @@ Ejecutar el siguiente script:
 cd ~/neo4j-src/
 deploy/r.sh
 ```
-
-### Instalar Java 8
-Ejecutar el siguiente script:
-```bash
-cd ~/neo4j-src/
-deploy/java8.sh
-```
-
-
