@@ -19,26 +19,33 @@ chmod +x neo4j-src/deploy/*.sh
 Ejecutar el siguiente script:
 ```bash
 cd ~/neo4j-src/
-deploy/java8.sh
+sudo deploy/java8.sh
 ```
 
 ### Instalar Neo4j
 Ejecutar el siguiente script:
 ```bash
 cd ~/neo4j-src/
-deploy/neo4j.sh
+sudo deploy/neo4j.sh
 ```
 
 ### Instalar driver Python para Neo4j 
 Ejecutar el siguiente script:
 ```bash
 cd ~/neo4j-src/
-deploy/python.sh
+sudo deploy/python.sh
 ```
 
-### Instalar R
+### Instalar R y RStudio
 Ejecutar el siguiente script:
 ```bash
 cd ~/neo4j-src/
-deploy/r.sh
+sudo deploy/r.sh
+```
+
+### Instalar Eclipse
+Ejecutar el siguiente script:
+```bash
+cd ~/neo4j-src/
+sudo deploy/eclipse.sh
 ```

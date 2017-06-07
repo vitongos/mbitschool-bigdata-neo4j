@@ -1,11 +1,6 @@
 #!/bin/bash
 
-yum groupinstall "Development tools"
-yum install -y zlib-devel
-yum install -y bzip2-devel
-yum install -y openssl-devel
-yum install -y ncurses-devel
-yum install -y sqlite-devel
+yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel
 cd /opt
 wget --no-check-certificate https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
 tar xf Python-2.7.9.tar.xz
