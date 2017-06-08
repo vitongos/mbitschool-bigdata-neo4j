@@ -21,7 +21,7 @@ sapply(n, function(x) ifelse(!is.null(x$title), x$title, x$name))
 #
 # 2. Create igraph
 #
-query <- "MATCH (a:Actor)-->(m:Movie) RETURN a.name, m.title LIMIT 500"
+query <- "MATCH (a:Actor)-->(m:Movie) RETURN a.name, m.title LIMIT 50"
 
 edgelist <- cypher(graph, query)
 g <- graph.data.frame(edgelist, directed = F)
