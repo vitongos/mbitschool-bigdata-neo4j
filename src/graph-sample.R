@@ -1,5 +1,7 @@
 install.packages("igraph")
-install.packages("RNeo4j")
+install.packages("devtools", dependencies=TRUE)
+devtools::install_github("nicolewhite/RNeo4j")
+
 library(igraph)
 library(RNeo4j)
 
