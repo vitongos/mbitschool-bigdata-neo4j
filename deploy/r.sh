@@ -1,7 +1,7 @@
 #!/bin/bash
 
 yum install -y epel-release 
-yum install -y R
+yum install -y R openssl-devel libcurl-devel
 yum update
 
 cd /tmp
