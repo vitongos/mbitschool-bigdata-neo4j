@@ -12,5 +12,5 @@ enabled=1
 gpgcheck=1
 EOF
 
-yum install neo4j
+yum install -y neo4j
 
