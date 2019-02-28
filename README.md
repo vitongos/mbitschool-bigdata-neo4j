@@ -12,9 +12,9 @@ Ejecutar el siguiente script:
 docker pull vitongos/mbitschool-bigdata-neo4j
 docker run \
     --publish=7474:7474 \
-		--publish=7687:7687 \
+    --publish=7687:7687 \
     -d \
-		vitongos/mbitschool-bigdata-neo4j
+    vitongos/mbitschool-bigdata-neo4j
 ```
 Pasados unos segundos, acceder al navegador del host: http://localhost:7474
 
