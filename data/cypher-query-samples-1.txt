@@ -2,7 +2,7 @@
 # ----------------------------------------------------------------------
 # ¿En cuántas películas ha participado Anthony Hopkins?
 
-MATCH (n {name: 'Anthony Hopkins'})-[:ACTS_IN]->(d) RETURN n, COUNT(d)
+MATCH (n {name: 'Anthony Hopkins'})-[:ACTS_IN]->(d) RETURN n.name, COUNT(d)
 
 # Sample 2
 # ----------------------------------------------------------------------
