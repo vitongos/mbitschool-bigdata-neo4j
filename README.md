@@ -4,48 +4,31 @@ Demos y fuentes del módulo de Neo4j en Big Data
 Instalación
 -----------
 
-A continuación se especifica el proceso de instalación de los diferentes sistemas necesarios para ejecutar las demos.
+A continuación se especifican los comandos necesarios para ejecutar las demos.
 
-### Instalar el repositorio clonándolo de Github:
+### Descarga de la imagen Docker y crear el contenedor:
 Ejecutar el siguiente script:
 ```bash
-sudo yum -y install git
-cd
-git clone https://github.com/vitongos/mbitschool-bigdata-neo4j.git neo4j-src
-chmod +x neo4j-src/deploy/*.sh
+docker pull vitongos/mbitschool-bigdata-neo4j
+docker run \
+    --publish=7474:7474 \
+		--publish=7687:7687 \
+    -d \
+		vitongos/mbitschool-bigdata-neo4j
+```
+Pasados unos segundos, acceder al navegador del host: http://localhost:7474
+
+### Parar/Arrancar el contenedor
+Ejecutar el siguiente script:
+```bash
+docker ps -a
+docker stop <CONTAINER_ID>
+dcoker start <CONTAINER_ID>
 ```
 
-### Instalar Java 8
+### Acceder a la consola del contenedor
 Ejecutar el siguiente script:
 ```bash
-cd ~/neo4j-src/
-sudo deploy/java8.sh
-```
-
-### Instalar Neo4j
-Ejecutar el siguiente script:
-```bash
-cd ~/neo4j-src/
-sudo deploy/neo4j.sh
-```
-
-### Instalar driver Python para Neo4j 
-Ejecutar el siguiente script:
-```bash
-cd ~/neo4j-src/
-sudo deploy/python.sh
-```
-
-### Instalar R y RStudio
-Ejecutar el siguiente script:
-```bash
-cd ~/neo4j-src/
-sudo deploy/r.sh
-```
-
-### Instalar Eclipse
-Ejecutar el siguiente script:
-```bash
-cd ~/neo4j-src/
-sudo deploy/eclipse.sh
+docker ps -a
+docker exec -it <CONTAINER_ID> bash
 ```
